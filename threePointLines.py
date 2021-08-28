@@ -7,7 +7,6 @@ from point_line import *
 def parseText(text):
 	# Remove all unnecessary symbols included in the text and return a list of values
 	vals = text.translate(None, "{}(),").split()
-	print(vals)
 	# Cycle through every value in the list, converting the value into a float, and saving it as a Point
 	points = set()
 	for x in range(0, len(vals), 2):

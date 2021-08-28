@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to the project Three Point Lines will be documented in this file
 
+## [1.0.4] - 8/28/2021
+### Added
+- Added input format to README file
+
+### Removed
+- Unnecessary print(vals) on line 10
+
+
 ## [1.0.3] - 8/28/2021
 ### Added
 - Functionality for running the program without arguments

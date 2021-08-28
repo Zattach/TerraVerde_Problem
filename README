@@ -20,6 +20,14 @@ If two or more arguments are given, then only the first two are used. The first 
 python threePointLines.py input.input output.output
 
 
+	SAMPLE INPUTS:
+The points should be given in one line using the format below with an example beneath:
+- Curly brackets "{}" begin and end the line
+- Each point is separated by a comma and space between them ", " (not before the first or after the last)
+- Each point is 2 numbers (positive or negative, whole or decimal) separated by a comma and space ", " and surrounded by parentheses "(x, y)"
+{(1, 1), (2, 2), (3, 3)}
+
+
 	FILE OUTPUT:
 The program will write a line to the output file in one of 3 formats:
 Line(x = _)					(note: _ is a stand-in for a value)
@@ -38,7 +46,8 @@ The program only prints 3 lines to the console, and those are timestamps for:
 I made this program using Python2.7.11, not for any reason in particular. Python3 should be fine to run this program as is, but let me know if I was mistaken.
 
 
-	SAMPLE INPUTS AND OTHER FILES:
+
+	OTHER FILES:
 Included in the zip file is another folder which contains (mostly) unnecessary files. One of these is my first draft of the program, in which I used a list instead of a dictionary. It did not scale well so I looked for other solutions, but it is still very similar to the end result.
 Other files are sample inputs that I used for testing throughout the process. Some are simple to test easily checkable solutions, others are large and give many many answers.
 Finally I included the python code I used and altered to generate test cases.
