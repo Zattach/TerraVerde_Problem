@@ -7,6 +7,7 @@ from point_line import *
 def parseText(text):
 	# Remove all unnecessary symbols included in the text and return a list of values
 	vals = text.translate(None, "{}(),").split()
+	print(vals)
 	# Cycle through every value in the list, converting the value into a float, and saving it as a Point
 	points = set()
 	for x in range(0, len(vals), 2):
@@ -28,10 +29,18 @@ def main():
 	start = time.time()
 	points = []
 	lines = {}
-	# Open the input file and call parseText()
-	with open(sys.argv[1], 'r') as input:
-		points = parseText(input.readline())
+
+	if len(sys.argv) >= 2:
+		# Open the input file and call parseText()
+		with open(sys.argv[1], 'r') as input:
+			points = parseText(input.readline())
+	else:
+		# If there is no given input filename, take user's input instead
+		userInput = raw_input("Enter your points in the correct format:\n")
+		start = time.time()
+		points = parseText(userInput)
 	print("Points parsed: " + str(time.time() - start) + "s")
+
 
 	# Cycle through every pair of Points (note: there are no duplicate Points as they were saved to a set)
 	for pointL in points:
@@ -45,8 +54,14 @@ def main():
 				lines[line] = 1
 	print("Lines determined: " + str(time.time() - start) + "s")
 
+	# Generate output filename if none is given
+	if len(sys.argv) >= 3:
+		outFileName = sys.argv[2]
+	else:
+		outFileName = "output.txt"
+
 	# Open the specified output file, overwriting any existing file by that name
-	with open(sys.argv[2], 'w') as output:
+	with open(outFileName, 'w') as output:
 		for line, value in lines.items():
 			# If the value occurs 2 or more times (contains at least 3 points) output the Line
 			if value >= 2:

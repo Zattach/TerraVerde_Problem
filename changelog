@@ -1,6 +1,19 @@
 # Changelog
 All notable changes to the project Three Point Lines will be documented in this file
 
+## [1.0.3] - 8/28/2021
+### Added
+- Functionality for running the program without arguments
+	- if running with no arguments, user is prompted to enter points
+	- If running with one argument, it is assumed to be input and output is "output.txt"
+	- If running with two or more arguments, the first is input, second is output, the rest are ignored
+- Added input examples to the README
+- Added argument changes to README
+
+### Changed
+- README.txt -> README
+
+
 ## [1.0.2] - 8/28/2021
 ### Added
 - Created Git repo containing my work

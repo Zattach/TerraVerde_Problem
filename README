@@ -8,6 +8,18 @@ This Python2.7 program will take in a specified file containing a list of points
 There is an module included in the zip file titled point_line.py. This module contains 2 classes used by the main program: Point and Line. These allow for easy visualization of the data being saved. Note that the classes override a few operations in order to be immutable and able to be hashed. This was neccessary as I was saving them in sets and dictionaries.
 
 
+	USAGE AND ARGUMENTS:
+The program takes any number of inputs to run, but only uses the first 2 (if they are used). The first argument is the filename of the input file to read points from. The second argument is the filename of the output file to save the list of valid lines to.
+If no arguments are given, the user will be prompted to enter a set of points to be analyzed. Example below:
+python threePointLines.py
+
+If one argument is given, it is assumed to be the input filename. In this case, the default output filename is "output.txt". Example below:
+python threePointLines.py input.input
+
+If two or more arguments are given, then only the first two are used. The first argument is taken as the input filename, the second as the output filename, and the remainder are ignored. Example below:
+python threePointLines.py input.input output.output
+
+
 	FILE OUTPUT:
 The program will write a line to the output file in one of 3 formats:
 Line(x = _)					(note: _ is a stand-in for a value)
@@ -26,13 +38,7 @@ The program only prints 3 lines to the console, and those are timestamps for:
 I made this program using Python2.7.11, not for any reason in particular. Python3 should be fine to run this program as is, but let me know if I was mistaken.
 
 
-	USAGE:
-This program takes in 2 input variables which are simply the input file and the output file name. Below is an example of the usage in a Linux based terminal:
-
-python threePointLines.py input.input output.output
-
-
-	INPUTS AND OTHER FILES:
+	SAMPLE INPUTS AND OTHER FILES:
 Included in the zip file is another folder which contains (mostly) unnecessary files. One of these is my first draft of the program, in which I used a list instead of a dictionary. It did not scale well so I looked for other solutions, but it is still very similar to the end result.
 Other files are sample inputs that I used for testing throughout the process. Some are simple to test easily checkable solutions, others are large and give many many answers.
 Finally I included the python code I used and altered to generate test cases.
@@ -42,5 +48,6 @@ Finally I included the python code I used and altered to generate test cases.
 This program was created by 
 Zach Domke		8/25/2021 - 8/27/2021
 zach.domke.hiring@gmail.com
-/in/zachary-domke
 (408) 218-5535
+github.com/Zattach
+/in/zachary-domke
