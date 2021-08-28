@@ -1,0 +1,77 @@
+# Changelog
+All notable changes to the project Three Point Lines will be documented in this file
+
+## [1.0.2] - 8/28/2021
+### Added
+- Created Git repo containing my work
+- Created changelog file to record changes (populated from memory)
+
+
+## [1.0.1] - 8/27/2021 - Unpublished
+### Added
+- Created README file
+- Created a timer to determine how long the program ran for
+	- Allowed for easier O() comparison between v[1.0.0] and v[0.0.4]
+- Take in another argument as a file to output data to, clearing up space in my Terminal window
+
+### Changed
+- Moved all sample input files, input generator program, and v[0.0.4] to directory "extra"
+
+
+## [1.0.0] - 8/27/2021 - Unpublished
+### Added
+- Created new file "threePointLines_Draft.py" to save v[0.0.4]
+
+### Changed
+- Altered logic to save potential Lines in a dict rather than a list
+	- When adding Line to the dict, check if it already exists
+		- If yes, add 1 to the value
+		- If no, create it with value of 1
+	- Allows for quicker lookup times, drastically reducing O()
+- Instead of checking a Line's set of points is 3 or larger, check if its value in the dictionary is at least 2
+	- Value of 2 indicates at least 2 line segments, meaning 3 or more Points on the line
+
+
+## [0.0.4] - 8/26/2021 - Unpublished
+### Changed
+- Altered parseText() to correctly process values longer than 1 digit
+- Altered parseText() to save the values of the input to a list
+- Changed file name from "lines.py" to "threePointLines.py"
+	- This was done to avoid confusion with "point_line.py"
+
+
+## [0.0.3] - 8/26/2021 - Unpublished
+### Added
+- Created new file point_line.py to save Class definitions
+
+### Changed
+- Moved Point and Line Class definitions to point_line.py to clear up space
+
+
+## [0.0.2] - 8/26/2021 - Unpublished
+### Added
+- Created 1 new Class "Line" in lines.py
+- Made Line printable by overriding operation: "__str__"
+- Made Line immutable by overriding operations: "__eq__" "__ne__" and "__hash__"
+- Made Point immutable by overriding operation: "__hash__"
+- Added functionality to lines.py:
+	- Finds the Line between 2 Points: "getLineSegment()"
+	- Saves the given Line in a list
+	- Saves the Points in a Line to the Line's internal set of Points
+	- Prints all Lines in the set containing 3 or more Points
+
+### Changed
+- Fixed "__ne__" operation override in Point to make it work properly
+- Points are saved in a list rather than a set to allow for easier iteration
+	- Points are still initially saved in a list to avoid duplications
+
+
+## [0.0.1] - 8/25/2021 - Unpublished
+### Added
+- Created the file "lines.py"
+- lines.py includes 1 Class "Point"
+- Made Point printable by overriding operation: "__str__"
+- Made Point comparable by overriding operations: "__eq__" and "__ne__"
+- lines.py:
+	- Takes in an input file
+	- Parses it to Points saved in a set: "parseText()"
